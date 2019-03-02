@@ -1,0 +1,5 @@
+com\guilttrip\controller\HomeController.class
+com\guilttrip\model\Activity.class
+com\guilttrip\controller\UserController.class
+com\guilttrip\controller\UserRestController.class
+com\guilttrip\model\User.class

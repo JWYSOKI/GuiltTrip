@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="GuiltTrip-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/resources/images"/>
+        <property name="context-root" value="GuiltTrip"/>
+        <property name="java-output-path" value="/GuiltTrip/build/classes"/>
+    </wb-module>
+</project-modules>
