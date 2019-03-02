@@ -7,16 +7,19 @@
 //Defines the 'asyncForm' module
 var asyncForm = angular.module('asyncForm', []);
 
-//Declares a controller called `MainController` that is registered in an AngularJS module named `asyncForm`.
-//The data model(a simple array of items in object literal notation) is now instantiated within the MainConroller controller. 
-//The controller is simply a constructor function that takes a $scope parameter.
+// Declares a controller called `MainController` that is registered in an
+// AngularJS module named `asyncForm`.
+// The data model(a simple array of items in object literal notation) is now
+// instantiated within the MainConroller controller.
+// The controller is simply a constructor function that takes a $scope
+// parameter.
 asyncForm.controller('MainController', function MainController($scope, $http) {
 	$scope.activity = "";
 	$scope.motivation = "";
 	$scope.time = "";
 	console.log($scope);
 	
-	//ng-click functionality here
+	// ng-click functionality here
 	
 	$scope.asyncFunction = function showAsyncData() {
 		
@@ -30,9 +33,7 @@ asyncForm.controller('MainController', function MainController($scope, $http) {
 		.catch(error => console.log(error))
 		}
 	
-
-
   
-  //Can i add another controller here? It is still inside my 'asyncForm' module so that should work, if I understand correctly
-  
+  // Can i add another controller here? It is still inside my 'asyncForm'
+	// module so that should work, if I understand correctly
 });

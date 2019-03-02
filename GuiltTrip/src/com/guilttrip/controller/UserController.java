@@ -15,12 +15,13 @@ public class UserController {
 
   @RequestMapping(value = "/register", method = RequestMethod.GET)
   public String showRegister() {
-	  System.out.println("im working");
+	  System.out.println("clicked register");
     return "register";
   }
   
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public String showLogin() {
+	  System.out.println("clicked login");
     return "login";
   }
   
@@ -31,8 +32,6 @@ public class UserController {
   }
   
 
-
- 
   // ===== back forms that control the submit button (binds data to a model for use elsewhere in app) =======//
   
   @RequestMapping(value = "/register", method = RequestMethod.POST)
