@@ -3,15 +3,15 @@ package com.guilttrip.model;
 public class User {
 	
 	private String firstName;
-	
 	private String lastName;
-	
 	private String userName;
-	
 	private String password;
 	
+	// This is a default construction. It instantiates everything to null.
+	//Spring needs this to create a default bean
+	public User (){};
 	
-	
+	//Getters and setters
 	public String getFirstName() {
 		return firstName;
 	}
@@ -44,8 +44,6 @@ public class User {
 		this.password = password;
 	}
 
-	// This is a default construction. It instantiates everything to null. Spring needs this to create a default bean
-	public User (){};
 	
 	@Override
 	public  String toString() {

@@ -4,65 +4,62 @@
 <%@ page import="java.util.List"%>
 
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<jsp:include page="/resources/partials/header.jsp" />
+
+
 
 <!-- This is an ng-app directive named "asyncForm" -->
-<html ng-app="asyncForm">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<jsp:include page="/resources/partials/header.jsp" />
 <title>Hello</title>
 </head>
-<body ng-controller="MainController">
-	<form name="myAsynchronosForm">
+
+<body ng-app="GuiltTrip" >
+
+<div ng-controller="GuiltController as controller">
+
+	<form name="myAsynchronosForm" ng-submit="controller.sendGuiltTripData()">
 		<!-- Note to self** In this code: <form action="setup" method="post">, the "form action" is where the URL redirect occurs -->
 		<table>
 			<th>Welcome to Guilt Trip!</th>
 
 			<tr>
 				<td>Enter activity</td>
-				<td><input type="text" ng-model="activity" required /></td>
+				<td><input type="text" ng-model="controller.activity" required /></td>
 			</tr>
 			<tr>
 				<td>Enter motivation (optional)</td>
-				<td><input type="text" ng-model="motivation" /></td>
+				<td><input type="text" ng-model="controller.motivation" /></td>
 			</tr>
 			<tr>
 				<td>Enter reminder time</td>
-				<td><input type="text" ng-model="reminder_time" required /></td>
+				<td><input type="text" ng-model="controller.reminderTime" required /></td>
 			</tr>
 			<tr>
-				<td><input type="submit" ng-click="asyncFunction()"></input></td>
+				<td><input type="submit"></input></td>
 			</tr>
 		</table>
 	</form>
-
-	<%
-		JSONObject json = new JSONObject();
-		json.put("title", "TITLE_TEST");
-		json.put("link", "LINK_TEST");
-	    out.print(json);
-		out.flush();
-	%>
-
+		        <div style="border:5px, solid, red;" ng-repeat="guilt in controller.guiltData">
+		        
+		        
+		        <!-- ng-repeat is Angular's for loop -->
+		          <h3> {{controller.vm.guilt.motivation}}</h3>
+		        <!-- Why is this h3 iterating 5 times? -->  
+		          <h3 style="border:5px, solid, red;"> whatever</h3>
+		           <span>{{guilt.activity}}</span>
+		       		<span>{{guilt.motivation}}</span>
+		       		<span>{{guilt.reminderTime}}</span>
+		          
+		        </div> 
       <script>
-         function studentController($scope,$http) {
-            var url = "/data.txt";
-
-            $http.get(url).then( function(response) {
-               $scope.students = response.data;
-            });
-         }
-      </script>
-      
-      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
+ 
       </script>
 
-
-
-
+</div>
 </body>
 </html>
