@@ -44,16 +44,15 @@
 			</tr>
 		</table>
 	</form>
-		        <div style="border:5px, solid, red;" ng-repeat="guilt in controller.guiltData">
+		        <div ng-repeat="guilt in controller.guiltData">
 		        
 		        
 		        <!-- ng-repeat is Angular's for loop -->
-		          <h3> {{controller.vm.guilt.motivation}}</h3>
-		        <!-- Why is this h3 iterating 5 times? -->  
-		          <h3 style="border:5px, solid, red;"> whatever</h3>
-		           <span>{{guilt.activity}}</span>
+		          <h3 style="border:5px, solid, red;"> {{controller.vm.guilt.motivation}}</h3>
+		          <h3 style="border:5px, solid, red;"> display on screen</h3>
+		           <!--  <span>{{guilt.activity}}</span>
 		       		<span>{{guilt.motivation}}</span>
-		       		<span>{{guilt.reminderTime}}</span>
+		       		<span>{{guilt.reminderTime}}</span> -->
 		          
 		        </div> 
       <script>

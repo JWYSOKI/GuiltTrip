@@ -2,9 +2,9 @@
 //Components (module, controller, factory) kept separate in their own files
 // Wrap Angular components in an IIFE to remove variables from global scope. 
 
-//== ? === ? should this be named a 'manager' instead of service since it is front end?
+//Question: should this be named a 'manager' instead of service since it is front end?
 
-(function() {
+
 "use strict";
 
 angular
@@ -29,5 +29,4 @@ guiltService.$inject = ['$http','$log'];
 		}
 	}
 	
-function shouldThisBeNamedLogger() { }
-})();	
+	

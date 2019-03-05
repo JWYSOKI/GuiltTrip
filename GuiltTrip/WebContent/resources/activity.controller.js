@@ -2,7 +2,6 @@
 //Components (module, controller, factory) kept separate in their own files.
 // Wrap Angular components in an IIFE to remove variables from global scope. 
 
-
 'use strict'; 
 
 angular
@@ -42,11 +41,11 @@ function GuiltController(guiltService, $log){
 	
 /////////////////////////////////////////////////////////////
 	
-	vm.getGuiltTripData = function(){
+	vm.getGuiltTripData = function getGuiltTripData(){
 			return guiltService.getGuiltList()
 			.then(function(data){
 				vm.guiltData = data;
-				 console.log("vm.guiltData");
+				 console.log(vm.guiltData);
 				 return vm.guiltData;
 			})
 			  
