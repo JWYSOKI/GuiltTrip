@@ -1,5 +1,14 @@
 package com.guilttrip.model;
 
+//enitity = model
+
+// models are representations of my data (or a table in my data base)
+
+// getters and setters are always in models
+
+// models will always look the same
+
+
 public class Activity {
 	
 	private String activity;

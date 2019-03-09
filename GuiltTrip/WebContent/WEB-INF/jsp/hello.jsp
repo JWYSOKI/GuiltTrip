@@ -48,10 +48,9 @@
 		        
 		        <!-- REMOVED .vm between controller and guilt on line 50!!!! -->
 		          <h3 style="border:5px, solid, red;"> {{controller.guilt.motivation}}</h3>
-		          <h6 style="border:5px, solid, red;"> display this on screen</h6>
 		          <span>{{guilt.activity}}</span>
 		       		<span>{{guilt.motivation}}</span>
-		       		<span>{{guilt.reminderTime}}</span> -->
+		       		<span>{{guilt.reminderTime}}</span>
 		          
 		        </div> 
       <script>
