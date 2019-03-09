@@ -22,7 +22,7 @@
 
 <div ng-controller="GuiltController as controller">
 
-	<form name="myAsynchronosForm" ng-submit="controller.sendGuiltTripData()">
+	<form name="myAsynchronosForm" ng-submit="controller.sendTaskData()">
 		<!-- Note to self** In this code: <form action="setup" method="post">, the "form action" is where the URL redirect occurs -->
 		<table>
 			<th>Welcome to Guilt Trip!</th>
@@ -44,7 +44,7 @@
 			</tr>
 		</table>
 	</form>
-		        <div ng-repeat="guilt in controller.guiltData">
+		        <div ng-repeat="guilt in controller.taskData">
 		        
 		        <!-- REMOVED .vm between controller and guilt on line 50!!!! -->
 		          <h3 style="border:5px, solid, red;"> {{controller.guilt.motivation}}</h3>

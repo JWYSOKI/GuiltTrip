@@ -11,28 +11,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.guilttrip.model.Activity;
+import com.guilttrip.model.Task;
 
 @RestController
 public class UserRestController {
 
 //accepts data and returns http.status	
-	List<Activity> activities = new ArrayList<Activity>();
+	List<Task> tasks = new ArrayList<Task>();
 	
 	@RequestMapping(value = "/data", method = RequestMethod.POST)
-	public ResponseEntity<?> postActivity(@RequestBody Activity activity) {
+	public ResponseEntity<?> postTask(@RequestBody Task task) {
 		
-		activities.add(activity);
-		System.out.println(activity);
-		return new ResponseEntity <>(activities, HttpStatus.OK);
+		tasks.add(task);
+		System.out.println(task);
+		return new ResponseEntity <>(tasks, HttpStatus.OK);
 	}
 
 //Gives user JSON data as return value	
 	
 	@RequestMapping(value = "/data", method = RequestMethod.GET, produces=MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE)
-    public List<Activity> showAllActivities() {
+    public List<Task> showAllTasks() {
        
-		return activities;
+		return tasks;
     }
 }
 

@@ -1,6 +1,6 @@
 package com.guilttrip.model;
 
-//enitity = model
+//entity = model
 
 // models are representations of my data (or a table in my data base)
 
@@ -9,15 +9,15 @@ package com.guilttrip.model;
 // models will always look the same
 
 
-public class Activity {
+public class Task {
 	
 	private String activity;
 	private String motivation;
 	private int reminderTime;
 	
-	public Activity (){};
+	public Task (){};
 	
-	public Activity(String activity, String motivation, int reminderTime) {
+	public Task(String activity, String motivation, int reminderTime) {
 		super();
 		this.activity = activity;
 		this.motivation = motivation;
