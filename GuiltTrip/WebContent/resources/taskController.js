@@ -14,27 +14,27 @@ function GuiltController(guiltService, $log){
 	
 	let vm = this;
 	
-	vm.guiltTripInfo = {};
+	vm.taskInfo = {};
 	
-	vm.guiltData = [];
+	vm.taskData = [];
 	
 	
 // ng-click functionality here on the hello.jsp form
 	
-	vm.sendGuiltTripData = function sendGuiltTripData() {
+	vm.sendTaskData = function sendTaskData() {
 
 // This binds data from view and sends to back end (which is currently '/data')		
-				let newGuiltTripInfo = {
+				let newTaskInfo = {
 				"activity": vm.activity,
 				"motivation": vm.motivation,
 				"reminderTime": vm.reminderTime
 			}		
 				
-		console.log("from controller" + newGuiltTripInfo);
-		guiltService.addGuilt(newGuiltTripInfo).then(function(response){
+		console.log("from controller" + newTaskInfo);
+		guiltService.addTask(newTaskInfo).then(function(response){
 			
-			console.log(vm.guiltData);
-			vm.guiltData = response.data;
+			console.log(vm.taskData);
+			vm.taskData = response.data;
 			
 			
 		});
@@ -45,12 +45,12 @@ function GuiltController(guiltService, $log){
 	//and ( IN THEORY ) display that retrieved data in view
 	
 	
-	vm.getGuiltTripData = function getGuiltTripData(){
-			return guiltService.getGuiltList()
+	vm.getTaskData = function getTaskData(){
+			return guiltService.getTaskList()
 			.then(function(response){
-				vm.guiltData = response.data;
-				 console.log(vm.guiltData);
-				 return vm.guiltData;
+				vm.taskData = response.data;
+				 console.log(vm.taskData);
+				 return vm.taskData;
 			})
 			  
 			 

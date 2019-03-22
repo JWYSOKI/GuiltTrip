@@ -16,15 +16,15 @@ guiltService.$inject = ['$http','$log'];
 	function guiltService($http, $log){
 		
 		return{
-			addGuilt: addGuilt,
-			getGuiltList: getGuiltList
+			addTask: addTask,
+			getTaskList: getTaskList
 		};
 		
-		function addGuilt(newGuiltTripInfo){
-			return $http.post('data', newGuiltTripInfo);
+		function addTask(newTaskInfo){
+			return $http.post('data', newTaskInfo);
 		}	
 		
-		function getGuiltList(){
+		function getTaskList(){
 			return $http.get('data');
 		}
 	}
